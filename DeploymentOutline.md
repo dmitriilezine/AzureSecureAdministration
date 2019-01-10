@@ -19,21 +19,9 @@ If you are not authorised then most deployments will not work.**
 
 
 1. [Deploy Azure Key Vaults](DeployAzureKeyVaults.md)
-2. 	Identify Log Analytics workspace used by the Azure Security Center for the target Azure subscription. 
+2. Identify Log Analytics workspace used by the Azure Security Center for the target Azure subscription. 
     This workspace will be used to log data from deployed resoucres. If Azure Security Center is not enabled then it will need to be enabled. Recommend to use Standard pricing tier to get all advanced features of ASC.
-3. 	Deploy storage accounts that will be used for VM diagnostics, network logging and SQL audit. Use the following link to initiate deployment in your target Tenant/Subscription.
-```<language>
-	https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-StorageAccounts%2Fmaster%2FAzurePAW-StorageAccounts%2Fazuredeploy.json
-```
-	
-
-> 	This ARM template will create three storage accounts. One account will be used for VM diagnostics, second for NSG diagnostics logging and third account for Azure SQL audit logging.
-If more storage accounts are required by the design, then modify template as needed.
-**Note:** if your Azure AD account has access to multiple tenants/subscriptions, and when you click on the URL it targets wrong tenant, you will need to insert your desired tenant into the url as follows:
-
-	https://portal.azure.com/YOURTARGETTENANT.onmicrosoft.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-StorageAccounts%2Fmaster%2FAzurePAW-StorageAccounts%2Fazuredeploy.json
-
-
+3. [Deploy storage accounts](DeployStorageAccounts.md)
 4. [Deploy vNet](DeployvNet.md)
 5. [Deploy DNS Server](DeployDNSServer.md)
 6. [Deploy Active Directory](DeployADDS.md)
