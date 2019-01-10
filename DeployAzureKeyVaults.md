@@ -16,12 +16,14 @@ $location ="SpecifyRegion"
 $keyVaultName = "mySecretsAKV"
 
 # for test environment do not enable softDelete
+New-AzureRmResourceGroup -Name $rgName -Location $location
 New-AzureRmKeyVault -VaultName $keyVaultName -ResourceGroupName $rgName -Location $location `
 -Sku Standard `
 -EnabledForDeployment `
 -EnabledForTemplateDeployment
 
 # for pre-prod and prod environment create AKV with softdelete and purge protection
+New-AzureRmResourceGroup -Name $rgName -Location $location
 New-AzureRmKeyVault -VaultName $keyVaultName -ResourceGroupName $rgName -Location $location `
 -Sku Standard  `
 -EnabledForDeployment `
@@ -43,16 +45,21 @@ $location ="SpecifyRegion - must be the same as where VMs will be deployed at"
 $keyVaultName = "myADEAKV"
 
 # for test environment do not enable softDelete
+New-AzureRmResourceGroup -Name $rgName -Location $location
 New-AzureRmKeyVault -VaultName $keyVaultName -ResourceGroupName $rgName -Location $location `
 -Sku Standard `
 -EnabledForDiskEncryption
 
 # for pre-prod and prod environment create AKV with softdelete and purge protection
+New-AzureRmResourceGroup -Name $rgName -Location $location
 New-AzureRmKeyVault -VaultName $keyVaultName -ResourceGroupName $rgName -Location $location `
 -Sku Standard `
 -EnabledForDiskEncryption `
 -EnableSoftDelete `
 -EnablePurgeProtection
 ```
+
+
+Reference: https://docs.microsoft.com/en-us/azure/key-vault/
 
 [Back to main page](DeploymentOutline.md)
