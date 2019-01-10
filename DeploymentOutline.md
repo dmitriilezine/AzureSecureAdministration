@@ -11,9 +11,10 @@ required by design.
 
 ## Use the following steps to deploy ADDS in Azure IaaS and all related components.
 
-****Note:** Most deployment templates in the following steps use Desired State Configuration (DSC) and PowerShell extenstions. 
+**<p style="color:Tomato;">****Note:** Most deployment templates in the following steps use Desired State Configuration (DSC) and PowerShell extenstions. 
 DSC and PowerShell code used by the deployments is only available to authorized users. 
-If you are not authorised then most deployments will not work.**
+If you are not authorised then most deployments will not work.**</p>**
+
 
 1. [Deploy Azure Key Vaults](DeployAzureKeyVaults.md)
 2. 	Identify Log Analytics workspace used by the Azure Security Center for the target Azure subscription. 
