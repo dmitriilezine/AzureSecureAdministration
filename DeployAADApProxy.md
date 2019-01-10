@@ -12,12 +12,13 @@ Azure AD Application Proxy is used to provide secure access to the Remote Deskto
 - When prompted, logon with account that has Tenant GA where AAD Application Proxy is going to be configured (this does not have to be the same AAD Tenant with which Azure subscription hosting VMs is associated. For test purposes and POCs the Tenant and subscription might not be assocaited. In production it should be the same secure realm)
 - When prompted second time, logon with account that has rights to write to the Azure Key Vault used for storing deployment secrets. This would be the account that have deployment rights in the subscription. First and second accounts can be the same.
 - This script will generate a secret that will be used to register AAD Application Proxy Connector and will store this secret in the "Secrets Key Vault"
+- Proceed to the next step wihout delay. I could not find for how the generated secret token will be valid, but tests showed that registration was failing after about 30 minutes after token generation (could be due to other reasons). Proceed to deploy connectors immediately after token generation is done and availble in the Key Vault.
 
 ## Deploy Azure AD App Proxy Connectors
 
 Provided template will deploy the following configuration:
 
-TO DO -> Create network diagram and paste it here
+TO DO -> Create diagram and paste it here
 
 ### Deploy AAD App Proxy Connectors via ARM template using browser
 
