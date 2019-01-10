@@ -32,8 +32,9 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 ```
 ### This deployment will do the following:
 - Install 2 Windows 2016 Server VM with the ADDS domain. Current deployment supports top level domain name only (ie contoso.com)
-- DIAD ImportExportAD package is applied to ADDS
-- Install 1 Windows 2016 Server VM with ADCS role. Enterprise Root Issuing CA. Adds a few custom certificate templates that can be used for certificate enrollment.
+- Both VMs configured as DNS servers.
+- DIAD ImportExportAD package is applied to ADDS. This creates Tier 0, 1, 2 OUs/GPOs
+- Install 1 Windows 2016 Server VM with ADCS role. Enterprise Root Issuing CA. Adds a few custom certificate templates that can be used for certificate enrollment in this environment. 
 - All VMs are joined to DomainControllers Subnet
 - It will encrypt each VM with ADE
 - It will configure each VM diagnostics with diagnostics storage account

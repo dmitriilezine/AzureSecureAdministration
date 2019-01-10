@@ -29,7 +29,7 @@ to save time it is recommended to save your custom parameters to the parameters 
 first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement vNet.
 
 ```<language>
-$RGName = "vNetResourceGroupName" #must be present. if not create it prior to running this script
+$RGName = "DNSServer-ResourceGroupName" #must be present. if not create it prior to running this script
 $URI = "https://raw.githubusercontent.com/dmitriilezine/AzurePAW-DNSServer/master/AzurePAW-DNSServer/azuredeploy.json"
 $ParFile = "C:\data\DNSServer-parametersFile.json"
 
@@ -39,6 +39,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 ```
 ### This deployment will do the following:
 - Install Windows 2016 Server VM, install DNS role on it and configure conditional forwarder for provided DNS name and IP address (should be the first ADDS DC)
+- It will join VM to the DNSServer subnet
 - It will encrypt VM with ADE
 - It will configure VM diagnostics with diagnostics storage account
 - It will install Microsoft antivirus extension
