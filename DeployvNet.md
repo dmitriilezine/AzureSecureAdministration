@@ -40,6 +40,12 @@ Login-AzureRmAccount
 New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI -TemplateParameterFile $ParFile
 
 ```
+### This deployment will do the following:
+1. Create vNet
+2. Create multiple NSGs
+3. Create multiple subnets and assigns appropriate NSG to target subnet
+4. Assign IP address for DNS server (to be deployed in later steps)
+
 
 ### Post Deployment Configurations
 #### RBAC
