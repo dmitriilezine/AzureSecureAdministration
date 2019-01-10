@@ -26,7 +26,7 @@ being configured and hardened. NSG rules in the template would need to be modifi
 
 TO DO -> provide vNet URL here 
 
-#### Deploy via PowerShell
+### Deploy via PowerShell
 If you are planning to test deployment multiple times and run it against the same deployment or new deployment, 
 to save time it is recommended to save your custom parameters to the parameters file. You can do this on the first browser deployment, 
 first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement vNet.
