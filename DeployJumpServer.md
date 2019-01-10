@@ -24,7 +24,7 @@ TO DO -> Create diagram and paste it here
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-POC-JumpServer%2Fmaster%2FAzurePAW-POC-JumpServer%2Fazuredeploy.json
 ```
 
-:heavy_exclamation_mark: Parameters :heavy_exclamation_mark: Most configuration erros come from specifying wrong parameters. 
+:heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
 Pay extra attension to paramter vaules required by the deployment.
 
 ### Deploy Jump Server via PowerShell

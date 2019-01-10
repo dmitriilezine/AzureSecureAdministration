@@ -42,6 +42,9 @@ Login-AzureRmAccount
 New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI -TemplateParameterFile $ParFile
 
 ```
+:heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
+Pay extra attension to paramter vaules required by the deployment.
+
 ### This deployment will do the following:
 1. Create vNet
 2. Create multiple NSGs
