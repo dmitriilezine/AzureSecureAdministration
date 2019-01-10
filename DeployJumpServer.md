@@ -33,7 +33,7 @@ to save time it is recommended to save your custom parameters to the parameters 
 first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement vNet.
 
 ```<language>
-$RGName = "vNetResourceGroupName" #must be present. if not create it prior to running this script
+$RGName = "JumpServer-ResourceGroupName" #must be present. if not create it prior to running this script
 $URI = "https://raw.githubusercontent.com/dmitriilezine/AzurePAW-POC-JumpServer/master/AzurePAW-POC-JumpServer/azuredeploy.json"
 $ParFile = "C:\data\JumpServer-parametersFile.json"
 
