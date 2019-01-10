@@ -25,10 +25,10 @@ If you are not authorised then most deployments will not work.**
 4. [Deploy vNet](DeployvNet.md)
 5. [Deploy DNS Server](DeployDNSServer.md)
 6. [Deploy Active Directory](DeployADDS.md)
-7. [Deploy AAD Application Proxy](DeployAADApProxy.md)
-8. [Deploy Azure SQL DB for RDS HA](DeployAzureSQL.md)
-9. [Deploy RDS](DeployRDS.md)
-10. [Deploy temporary Jump Server](DeployJumpServer.md). This server will be used for some manual configuration steps in Windows VMs and any troubleshooting during solution test.
+7. [Deploy temporary Jump Server](DeployJumpServer.md). This server will be used for some manual configuration steps in Windows VMs and any troubleshooting during solution test.
+8. [Deploy AAD Application Proxy](DeployAADApProxy.md)
+9. [Deploy Azure SQL DB for RDS HA](DeployAzureSQL.md)
+10. [Deploy RDS](DeployRDS.md)
 11. Post ADDS and RDS Deployment configuration
 12. [Deploy ADFS](DeployADFS.md)
 13. Deploy ADFS Proxy
