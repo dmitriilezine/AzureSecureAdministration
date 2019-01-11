@@ -2,23 +2,23 @@
 
 # Secure Deployment and Management of ADDS in Azure IaaS - Implementation
 
-Note on Resource Group strategy: The deployment of the solution is broken down 
-into multiple blocks. You can deploy all of them into a single Resource Group, 
+**Note on Resource Group strategy:** The deployment of the solution is broken down 
+into multiple components. You can deploy all solution components into a single Resource Group, 
 can deploy into combination of Resource Groups or can deploy each into its 
 own Reosurce Group. This is design choice. 
 
-**Recommendation** - deploy each component into its own Resource Group. This way you 
+**RG Recommendation** - deploy each component into its own Resource Group. This way you 
 can delete RG and not affect other solution compoenents (as long as there is no 
 dependency...). Also different RBAC can be assigned to individal RGs, if such is 
 required by design. You might have as many as dozen or more resource groups associaited with this solution (if chose to use separate components). 
 Come up with good naming strategy to quickly identify all RGs and their purpose. For example using this naming template Rg-ADDS-"solution component"-Lab, you will have RGs like 
 Rg-ADDS-StorageAccounts-Lab, Rg-ADDS-AKVADE-Lab, Rg-ADDS-vNet-Lab, Rg-ADDS-ADDS-Lab etc
-
+##
 > **Azure Privileged Access Workstation (Azure PAW)**
 - > All of the below deployments have been done from the Azure PAW that was introduced in the [Solution Overview](SolutionOverview.md). 
 - > Azure PAW should be used for prodcution, pre-prod and test deployments that lead to production implementation. Azure PAW should be used to manage ADDS and Tier 0 applications.
 - > Standard device can be used for proof of concept and development.
-# 
+## 
 :mega: All deployments have been tested for deployment with Subscription Contributor RBAC. Lower level RBAC was not used
 for any of the deployments. Lower level RBAC would require RBAC specific testing. 
 
