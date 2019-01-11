@@ -1,6 +1,6 @@
 [Back to Title Page](README.md)
 
-# Secure Deployment and Management of ADDS in Azure IaaS - Implementation
+# Secure Deployment and Management of ADDS in Azure IaaS - Implementation Steps
 
 **Note on Resource Group strategy:** The deployment of the solution is broken down 
 into multiple components. You can deploy all solution components into a single Resource Group, 
@@ -13,7 +13,7 @@ Come up with good naming strategy to quickly identify all RGs and their purpose.
 Rg-ADDS-StorageAccounts-Lab, Rg-ADDS-AKVADE-Lab, Rg-ADDS-vNet-Lab, Rg-ADDS-ADDS-Lab etc
 
 ##
-> **Azure Privileged Access Workstation (Azure PAW)**
+> #### **Azure Privileged Access Workstation (Azure PAW)**
 - > All of the below deployments have been done/tested from the Azure PAW that was introduced in the [Solution Overview](SolutionOverview.md). 
 - > Azure PAW should be used for prodcution, pre-prod and test deployments that lead to production implementation. Azure PAW should be used to manage Azure Control Plane, ADDS and Tier 0 applications.
 - > Standard prodcutivity device can be used for proof of concept deployments.
