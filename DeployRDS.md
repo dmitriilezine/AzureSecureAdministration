@@ -40,6 +40,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 - VMs for Session Hosts (3 VMs) are placed on the RDSSessionHosts subnet
 - Create ILB in front of RDS CB
 - Create ILB in front of RDS Gateway and Web
+- DNS records created poiting RDS and Gateway to respective IP addresses for each ILB
 - Download provided PFX certifcates to Connection Broker for postdeployment configuration
 - All VMs are domain joined, and considered Tier 0
 - It will encrypt each VM with ADE
