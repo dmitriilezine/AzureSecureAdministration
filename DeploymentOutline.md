@@ -13,24 +13,24 @@ Come up with good naming strategy to quickly identify all RGs and their purpose.
 Rg-ADDS-StorageAccounts-Lab, Rg-ADDS-AKVADE-Lab, Rg-ADDS-vNet-Lab, Rg-ADDS-ADDS-Lab etc
 
 ##
-> #### **Azure Privileged Access Workstation (Azure PAW)**
+> ### **Azure Privileged Access Workstation (Azure PAW)**
 - > All of the below deployments have been done/tested from the Azure PAW that was introduced in the [Solution Overview](SolutionOverview.md). 
 - > Azure PAW should be used for prodcution, pre-prod and test deployments that lead to production implementation. Azure PAW should be used to manage Azure Control Plane, ADDS and Tier 0 applications.
 - > Standard prodcutivity device can be used for proof of concept deployments.
   > Standard productivity/dev device can be used for development/refactoring of the ARM templates, DSC and PowerShell code
 ## 
 
-## Use the following steps to deploy Secure Management Solution for Azure Virtual Datacenter (Azure Components)
+## Use the following steps to deploy Secure Management Solution for Azure Virtual Datacenter
 
 :heavy_exclamation_mark: **Note: Most deployment templates in the following steps use Desired State Configuration (DSC) and PowerShell extenstions. 
 DSC and PowerShell code used by the deployments is only available to authorized users. 
-If you are not authorised then most deployments will not work.**
+If you are not authorised user then most deployments will not work.**
 
-:boom: If it is not obvious, the following deployments put in order to support other deployments. Do not attempt to deploy
-ADDS if you did not complete prior steps. 
+:boom: If it is not obvious, the following deployments put in order to support other deployments. Deployments will ask for required parameters,
+most of which correspond to other already exsing resourcres, like Vnet, Subnets, Key Vaults, Storage accounts etc. 
 
-:mega: All deployments have been tested for deployment with Subscription Contributor RBAC. Lower level RBAC was not used
-for any of the deployments. Lower level RBAC would require RBAC specific testing. 
+:mega: All deployments have been tested for deployment with Subscription Contributor RBAC. Lower level RBAC at subscription level or RBAC set 
+at individual RG level was not tested for any of the deployments. Lower level RBAC would require RBAC specific testing.
 
 :mega: All deployments have been tested in US West 2 and US South Central only.
 
