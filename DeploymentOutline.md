@@ -14,12 +14,17 @@ required by design. You might have as many as dozen or more resource groups asso
 Come up with good naming strategy to quickly identify all RGs and their purpose. For example using this naming template Rg-ADDS-"solution component"-Lab, you will have RGs like 
 Rg-ADDS-StorageAccounts-Lab, Rg-ADDS-AKVADE-Lab, Rg-ADDS-vNet-Lab, Rg-ADDS-ADDS-Lab etc
 
+> **Azure Privileged Access Workstation (Azure PAW)**
+- > All of the below deployments can be done from the Azure PAW that was introduced in the Solution Overview. 
+- > Azure PAW should be used for prodcution, pre-prod and test deployments that lead to production implementation..
+- > Standard device can be used for proof of concept and development.
+
 :mega: All deployments have been tested for deployment with Subscription Contributor RBAC. Lower level RBAC was not used
 for any of the deployments. Lower level RBAC would require RBAC specific testing. 
 
 :mega: All deployments have been tested in US West 2 and US South Central only.
 
-## Use the following steps to deploy ADDS in Azure IaaS and all related security components.
+## Use the following steps to deploy Secure Management Solution for Azure Virtual Datacenter (Azure Components)
 
 :heavy_exclamation_mark: **Note: Most deployment templates in the following steps use Desired State Configuration (DSC) and PowerShell extenstions. 
 DSC and PowerShell code used by the deployments is only available to authorized users. 
