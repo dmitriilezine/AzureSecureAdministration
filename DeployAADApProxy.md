@@ -66,7 +66,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 for which no custom cert is required.
   - Specify connector group to which new AAD App Proxy connectors have been assigned (RDS in our case)
   - Turn off translation headers in URLs
-  - In application, assign AAD user accounts that will be authorized to use it - "Users and Groups" 
+  - In application, use "Users and Groups" to assign AAD user accounts that will be authorized to use it
   - In application, assign existing or crerate new Conditional Access policy that will be applied to this application. 
  Assuming that Azure PAW is used for this deployment, assign the same Conditional Access policy as is used for Azure PAW access to the azure portal. 
 In test environments or proof of concept, you can assign different policy to show this control.
@@ -78,7 +78,7 @@ any device that does not comply with the policy.
     - Note: During RDS configuration, it will be configured to be published via Azure AD App Proxy. 
 
 
-
+References:  https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-integrate-with-remote-desktop-services
 
 
 [Back to main page](DeploymentOutline.md)

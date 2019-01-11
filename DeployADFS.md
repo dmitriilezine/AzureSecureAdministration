@@ -43,7 +43,7 @@ Set-AzureKeyVaultSecret -VaultName $vaultName -Name $secretName -SecretValue $se
 ### Verify that ADFS Delta GPO is configured in ADDS and is applied to the Identity OU
 ADFS delta GPO is deployed during ADDS deployment. There is a bug in the deployment and this GPO does not get all 
 settings migrated from the source file. Currently, until this bug is fixed, you will need to fix this GPO before ADFS VMs can be moved to the 
-"T0 Identity" OU. To do this you will need to power up JumpServer, access DC and reimport delta ADFS GPO. It is stored on the DC.
+"T0 Identity" OU. Logon via RDS, access DC and reimport delta ADFS GPO. It is stored on the DC.
 
 ### Deploy ADFS Farm
 
