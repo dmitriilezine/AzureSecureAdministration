@@ -20,6 +20,9 @@ Rg-ADDS-StorageAccounts-Lab, Rg-ADDS-AKVADE-Lab, Rg-ADDS-vNet-Lab, Rg-ADDS-ADDS-
 DSC and PowerShell code used by the deployments is only available to authorized users. 
 If you are not authorised then most deployments will not work.**
 
+:boom: If it is not obvious, the following deployments put in order to support other deployments. Do not attempt to deploy
+ADDS if you did not complete prior steps. It probably depends on all or some of them to be successfully completed.
+
 
 1. [Deploy Azure Key Vaults](DeployAzureKeyVaults.md)
 2. Identify Log Analytics workspace used by the Azure Security Center for the target Azure subscription. 
