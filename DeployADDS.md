@@ -11,7 +11,7 @@ TO DO -> Create network diagram and paste it here
 
 
 ### Deploy ADDS via ARM template using browser
-
+Use the following link to initiate deployment in your target Tenant/Subscription.
 ```<language>
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-ADDS%2Fmaster%2FAzurePAW-ADDS%2Fazuredeploy.json
 ```

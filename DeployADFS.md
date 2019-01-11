@@ -52,7 +52,7 @@ Provided template will deploy the following configuration:
 TO DO -> Create diagram and paste it here
 
 ### Deploy ADFS via ARM template using browser
-
+Use the following link to initiate deployment in your target Tenant/Subscription.
 ```<language>
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-ADFS%2Fmaster%2FAzurePAW-ADFS%2Fazuredeploy.json
 ```

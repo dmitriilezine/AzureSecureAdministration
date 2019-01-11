@@ -19,7 +19,7 @@ TO DO -> Create diagram and paste it here
 
 
 ### Deploy Jump Server via Browser
-
+Use the following link to initiate deployment in your target Tenant/Subscription.
 ```<language>
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-POC-JumpServer%2Fmaster%2FAzurePAW-POC-JumpServer%2Fazuredeploy.json
 ```

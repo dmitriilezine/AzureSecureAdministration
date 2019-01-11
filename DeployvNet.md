@@ -25,8 +25,10 @@ prevent any potential attack on the environment from internal customer network (
 being configured and hardened. NSG rules in the template would need to be modified to accommodate this deployment consideration.
 
 ### Deploy vNet via ARM template using browser
-
+Use the following link to initiate deployment in your target Tenant/Subscription.
+```<language>
 TO DO -> provide vNet URL here 
+```
 
 ### Deploy via PowerShell
 If you are planning to test deployment multiple times and run it against the same deployment or new deployment, 
