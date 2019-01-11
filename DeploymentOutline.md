@@ -15,8 +15,8 @@ Come up with good naming strategy to quickly identify all RGs and their purpose.
 Rg-ADDS-StorageAccounts-Lab, Rg-ADDS-AKVADE-Lab, Rg-ADDS-vNet-Lab, Rg-ADDS-ADDS-Lab etc
 
 > **Azure Privileged Access Workstation (Azure PAW)**
-- > All of the below deployments can be done from the Azure PAW that was introduced in the [Solution Overview](SolutionOverview.md). 
-- > Azure PAW should be used for prodcution, pre-prod and test deployments that lead to production implementation..
+- > All of the below deployments have been done from the Azure PAW that was introduced in the [Solution Overview](SolutionOverview.md). 
+- > Azure PAW should be used for prodcution, pre-prod and test deployments that lead to production implementation. Azure PAW should be used to manage ADDS and Tier 0 applications.
 - > Standard device can be used for proof of concept and development.
 # 
 :mega: All deployments have been tested for deployment with Subscription Contributor RBAC. Lower level RBAC was not used
