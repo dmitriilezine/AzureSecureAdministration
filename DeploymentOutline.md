@@ -16,8 +16,9 @@ Rg-ADDS-StorageAccounts-Lab, Rg-ADDS-AKVADE-Lab, Rg-ADDS-vNet-Lab, Rg-ADDS-ADDS-
 ##
 > **Azure Privileged Access Workstation (Azure PAW)**
 - > All of the below deployments have been done from the Azure PAW that was introduced in the [Solution Overview](SolutionOverview.md). 
-- > Azure PAW should be used for prodcution, pre-prod and test deployments that lead to production implementation. Azure PAW should be used to manage ADDS and Tier 0 applications.
-- > Standard device can be used for proof of concept and development.
+- > Azure PAW should be used for prodcution, pre-prod and test deployments that lead to production implementation. Azure PAW should be used to manage Azure Control Plane, ADDS and Tier 0 applications.
+- > Standard prodcutivity device can be used for proof of concept deployments.
+  > Standard productivity/dev device can be used for development/refactoring of the ARM templates, DSC and PowerShell code
 ## 
 :mega: All deployments have been tested for deployment with Subscription Contributor RBAC. Lower level RBAC was not used
 for any of the deployments. Lower level RBAC would require RBAC specific testing. 
@@ -31,7 +32,7 @@ DSC and PowerShell code used by the deployments is only available to authorized 
 If you are not authorised then most deployments will not work.**
 
 :boom: If it is not obvious, the following deployments put in order to support other deployments. Do not attempt to deploy
-ADDS if you did not complete prior steps. It probably depends on all or some of them to be successfully completed.
+ADDS if you did not complete prior steps. 
 
 
 1. [Deploy Azure Key Vaults](DeployAzureKeyVaults.md)
