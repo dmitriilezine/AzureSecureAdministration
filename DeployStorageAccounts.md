@@ -18,6 +18,6 @@ https://portal.azure.com/YOURTARGETTENANT.onmicrosoft.com/#create/Microsoft.Temp
 
 
 
-[Back to main page](DeploymentOutline.md)
+[Back to main page](DeploymentOutline.md) 
 
 

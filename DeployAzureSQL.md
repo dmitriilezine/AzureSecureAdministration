@@ -18,7 +18,7 @@ Pay extra attension to paramter vaules required by the deployment.
 ### Deploy Azure SQL DB via PowerShell
 If you are planning to test deployment multiple times and run it against the same deployment or new deployment, 
 to save time it is recommended to save your custom parameters to the parameters file. You can do this on the first browser deployment, 
-first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement vNet.
+first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement Azure SQL DB.
 
 ```<language>
 $RGName = "ADDProxy-ResourceGroupName" #must be present. if not create it prior to running this script

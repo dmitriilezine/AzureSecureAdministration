@@ -19,7 +19,7 @@ Pay extra attension to paramter vaules required by the deployment.
 ### Deploy RDS via PowerShell
 If you are planning to test deployment multiple times and run it against the same deployment or new deployment, 
 to save time it is recommended to save your custom parameters to the parameters file. You can do this on the first browser deployment, 
-first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement vNet.
+first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement RDS.
 
 ```<language>
 $RGName = "RDS-ResourceGroupName" #must be present. if not create it prior to running this script
@@ -40,7 +40,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 - VMs for Session Hosts (3 VMs) are placed on the RDSSessionHosts subnet
 - Create ILB in front of RDS CB
 - Create ILB in front of RDS Gateway and Web
-- DNS records created poiting RDS and Gateway to respective IP addresses for each ILB
+- DNS records created pointing RDS and Gateway to respective IP addresses for each ILB
 - Download provided PFX certifcates to Connection Broker for postdeployment configuration
 - All VMs are domain joined, and considered Tier 0
 - It will encrypt each VM with ADE
@@ -50,7 +50,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 
 ### Post Deployment Configurations
 - Validate via ASC that all VMs are registered with ASC. Validate that they are not showing any red.
-- Logon TO BE DEVELOPED
+- Steps to finish configuration of RDS to BE DEVELOPED
 
 
 

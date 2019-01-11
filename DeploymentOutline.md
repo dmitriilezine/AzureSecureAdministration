@@ -4,14 +4,15 @@ Note on Resource Group strategy: The deployment of the solution is broken down
 into multiple blocks. You can deploy all of them into a single Resource Group, 
 can deploy into combination of Resource Groups or can deploy each into its 
 own Reosurce Group. This is design choice. 
+
 **Recommendation **- deploy each component into its own Resource Group. This way you 
 can delete RG and not affect other solution compoenents (as long as there is no 
 dependency...). Also different RBAC can be assigned to individal RGs, if such is 
-required by design. You migght have as many as dozen or more resource groups assicaited with this solution (if chose to use separate components). 
-Come up with good naming strategy to quickly identify all RGs and their purpose. For example using this template Rg-ADDS-"solution component"-Lab, you will have RGs like 
+required by design. You might have as many as dozen or more resource groups associaited with this solution (if chose to use separate components). 
+Come up with good naming strategy to quickly identify all RGs and their purpose. For example using this naming template Rg-ADDS-"solution component"-Lab, you will have RGs like 
 Rg-ADDS-StorageAccounts-Lab, Rg-ADDS-AKVADE-Lab, Rg-ADDS-vNet-Lab, Rg-ADDS-ADDS-Lab etc
 
-## Use the following steps to deploy ADDS in Azure IaaS and all related components.
+## Use the following steps to deploy ADDS in Azure IaaS and all related security components.
 
 :heavy_exclamation_mark: **Note: Most deployment templates in the following steps use Desired State Configuration (DSC) and PowerShell extenstions. 
 DSC and PowerShell code used by the deployments is only available to authorized users. 

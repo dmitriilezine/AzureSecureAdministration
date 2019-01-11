@@ -8,7 +8,7 @@ and to the target VMs in the solution deployment.
 
 For inbound Internet access it is restricted by the specified source IP address of the client device. NSG rule will allow 
 access on port TCP3389 only from the specified source IP address. This IP address should be the IP of the device from which 
-troubleshooting operations are performed. 
+troubleshooting operations are performed. Easy way to find this IP is by typing "My IP" in your web browser. 
 
 During normal operations, this jump server should be shutdown or completely removed from the environment. If emergency access
 is required, it can be quickly redeployed into this subnet and provide such access.
@@ -31,7 +31,7 @@ Pay extra attension to paramter vaules required by the deployment.
 
 If you are planning to test deployment multiple times and run it against the same deployment or new deployment, 
 to save time it is recommended to save your custom parameters to the parameters file. You can do this on the first browser deployment, 
-first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement vNet.
+first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement Jump Server.
 
 ```<language>
 $RGName = "JumpServer-ResourceGroupName" #must be present. if not create it prior to running this script

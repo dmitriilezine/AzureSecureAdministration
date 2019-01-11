@@ -8,7 +8,7 @@ implementation steps for Azure based components.
 
 - [Solution Overview](SolutionOverview.md)
 
-- [Implementation Guide for Azure Components](DeploymentOutline.md)
+- [Implementation Guide for Azure Components](DeploymentOutline.md) 
 
 
 
