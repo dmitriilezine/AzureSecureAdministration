@@ -38,6 +38,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 - Additonal 4 VMs will need to manually added to RDS configuration post deployment
 - VMs for CB and GW (4 VMs) are placed on the RDS subnet
 - VMs for Session Hosts (3 VMs) are placed on the RDSSessionHosts subnet
+- VMs for Session Hosts (3 VMs) configured with RSAT tools to manage ADDS - need to identify any other required tools to be installed
 - Create ILB in front of RDS CB
 - Create ILB in front of RDS Gateway and Web
 - DNS records created pointing RDS and Gateway to respective IP addresses for each ILB

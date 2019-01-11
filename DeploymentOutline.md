@@ -5,7 +5,7 @@ into multiple blocks. You can deploy all of them into a single Resource Group,
 can deploy into combination of Resource Groups or can deploy each into its 
 own Reosurce Group. This is design choice. 
 
-**Recommendation **- deploy each component into its own Resource Group. This way you 
+**Recommendation** - deploy each component into its own Resource Group. This way you 
 can delete RG and not affect other solution compoenents (as long as there is no 
 dependency...). Also different RBAC can be assigned to individal RGs, if such is 
 required by design. You might have as many as dozen or more resource groups associaited with this solution (if chose to use separate components). 
@@ -30,10 +30,10 @@ If you are not authorised then most deployments will not work.**
 8. [Deploy AAD Application Proxy](DeployAADApProxy.md)
 9. [Deploy Azure SQL DB for RDS HA](DeployAzureSQL.md)
 10. [Deploy RDS](DeployRDS.md)
-11. Post ADDS and RDS Deployment configuration
+11. [Post ADDS and RDS Deployment configuration](PostADDSConfig.md)
 12. [Deploy ADFS](DeployADFS.md)
-13. Deploy ADFS Proxy
-14. Deploy AAD Connect 
+13. [Deploy ADFS Proxy](DeployADFSProxy.md)
+14. [Deploy AAD Connect](DeployAADConnect.md) 
 15. Deploy Point to Site VPN (optional)
 16. Deploy Addtional Domain Controller
 17. Deploy Additional RDS Session Host 

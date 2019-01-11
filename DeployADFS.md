@@ -90,6 +90,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 - Perform post configuration:
   - Reset ADFS service account pwd and move it to the Tier 0 Service Accounts OU
   - Move ADFS VMs to the Tier 0 Identity OUs
+- DNS Admin to create DNS record for ADFS federation service poiting to the ADFS ILB IP address
 - Perform ADFS configuration as required by the ADFS design (IdPs, RPs, claim rules etc)
 					
 
