@@ -8,9 +8,10 @@ can deploy into combination of Resource Groups or can deploy each into its
 own Reosurce Group. This is design choice. **RG Recommendation** - deploy each component into its own Resource Group. This way you 
 can delete RG and not affect other solution compoenents (as long as there is no 
 dependency...). Also different RBAC can be assigned to individal RGs, if such is 
-required by design. You might have as many as dozen or more resource groups associaited with this solution (if chose to use separate components). 
-Come up with good naming strategy to quickly identify all RGs and their purpose. For example using this naming template Rg-ADDS-"solution component"-Lab, you will have RGs like 
-Rg-ADDS-StorageAccounts-Lab, Rg-ADDS-AKVADE-Lab, Rg-ADDS-vNet-Lab, Rg-ADDS-ADDS-Lab etc
+required by design. You might have as many as dozen or more resource groups associaited with this solution. 
+Come up with good naming strategy to quickly identify all RGs and their purpose. For example using this naming 
+template Rg-ADDS-"solution component"-Lab, you will have RGs like 
+Rg-ADDS-StorageAccounts-Lab, Rg-ADDS-AKVADE-Lab, Rg-ADDS-vNet-Lab, Rg-ADDS-ADDS-Lab etc, which are easy to group together
 
 ##
 > ### **Azure Privileged Access Workstation (Azure PAW)**
