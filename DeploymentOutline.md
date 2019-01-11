@@ -34,7 +34,7 @@ for any of the deployments. Lower level RBAC would require RBAC specific testing
 
 :mega: All deployments have been tested in US West 2 and US South Central only.
 
-
+##
 1. [Deploy Azure Key Vaults](DeployAzureKeyVaults.md)
 2. Identify Log Analytics workspace used by the Azure Security Center for the target Azure subscription. 
     This workspace will be used to log data from deployed resoucres. If Azure Security Center is not enabled then it will need to be enabled. Recommend to use Standard pricing tier to get all advanced features of ASC.
