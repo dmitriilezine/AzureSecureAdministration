@@ -81,20 +81,20 @@ Set-RDSessionCollectionConfiguration -CollectionName $yourcollectionname -Custom
 ```
 
   - Test Connection to RDS from the client device:
-   - On the admin device, open IE and go to the external URL, ie https://rds-tenantname.msappproxy.net/rdewb (or your custom domain)
-   - Authenticate with Azure AD account
-   - You should now see RDS Web form for authentication
-   - Provide ADDS credential that have been authorized to use RDS, you should be authenticated into one of the Session Hosts
+    - On the admin device, open IE and go to the external URL, ie https://rds-tenantname.msappproxy.net/rdewb (or your custom domain)
+    - Authenticate with Azure AD account
+    - You should now see RDS Web form for authentication
+    - Provide ADDS credential that have been authorized to use RDS, you should be authenticated into one of the Session Hosts
   - Configure HA for Connection Broker
     - Add High Availability to the CB, speficy ODBC connection string from the Azure SQL DB (which was deployed in one of the prior deployments)
     - Update RDS certificate so it is instaled on the second CB VM
 
 
 References: 
-  https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-integrate-with-remote-desktop-services
-  https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure
-  https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster
-  https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-rdweb-gateway-ha
+-   https://docs.microsoft.com/en-us/azure/active-directory/manage-apps/application-proxy-integrate-with-remote-desktop-services
+-   https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-deploy-infrastructure
+-   https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-connection-broker-cluster
+-   https://docs.microsoft.com/en-us/windows-server/remote/remote-desktop-services/rds-rdweb-gateway-ha
 
 [Back to main page](DeploymentOutline.md)
 
