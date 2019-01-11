@@ -3,6 +3,7 @@
 
 deployment template to be developed
 
+![DeployADFSProxy ](img/DeployADFSProxyforADFS.PNG)
 
 ### This deployment will do the following:
 - Install 2 Windows 2016 Server VMs and configure them as ADFS Proxy servers against existing ADFS farm.

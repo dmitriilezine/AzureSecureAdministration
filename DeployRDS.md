@@ -4,9 +4,9 @@
 # Deploy RDS
 RDS is used to securely access Tier 0 of the deployed solution. 
 
-Provided template will deploy the following configuration:
+Provided template will deploy RDS servers and load balancers:
 
-TO DO -> Create diagram and paste it here
+![DeployRDS ](img/DeployRDS.PNG)
 
 ### Deploy RDS via ARM template using browser
 Use the following link to initiate deployment in your target Tenant/Subscription.

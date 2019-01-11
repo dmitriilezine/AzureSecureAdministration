@@ -13,9 +13,9 @@ troubleshooting operations are performed. Easy way to find this IP is by typing 
 During normal operations, this jump server should be shutdown or completely removed from the environment. If emergency access
 is required, it can be quickly redeployed into this subnet and provide such access.
 
-Provided template will deploy the following configuration:
+Provided template will deploy temp Jump Server:
 
-TO DO -> Create diagram and paste it here
+![DeployJumpServer ](img/DeployJumpServer.PNG)
 
 
 ### Deploy Jump Server via Browser

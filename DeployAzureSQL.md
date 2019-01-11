@@ -3,9 +3,9 @@
 # Deploy Azure SQL DB
 Azure SQL DB will be used to provide HA to the RDS Connection Broker.
 
-Provided template will deploy the following configuration:
+Provided template will deploy Azure SQL server and SQL DB:
 
-TO DO -> Create diagram and paste it here
+![DeployAzureSQL ](img/DeployAzureSQLDB.PNG)
 
 ### Deploy Azure SQL DB via ARM template using browser
 Use the following link to initiate deployment in your target Tenant/Subscription.

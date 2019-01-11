@@ -3,6 +3,7 @@
 
 deployment template to be developed
 
+![DeployAADConnect ](img/DeployAADConnect.PNG)
 
 ### This deployment will do the following:
 - Install 1 Windows 2016 Server VMs, download and install AAD Connect. No configuration of AAD Connect is done.

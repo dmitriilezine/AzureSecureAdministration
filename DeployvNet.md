@@ -15,7 +15,7 @@ type of traffic is allowed into each subnet. You can examine NSG rules in the te
 
 Provided template will deploy the following network configuration:
 
-![Vnet ](img/vNet.PNG)
+![Vnet ](img/DeployVNet.PNG)
 
 
 > Deployment consideration - block all incoming traffic from other customer environments (only allow inter-subnet) 

@@ -16,9 +16,9 @@ Azure AD Application Proxy is used to provide secure access to the Remote Deskto
 
 ## Deploy Azure AD App Proxy Connectors
 
-Provided template will deploy the following configuration:
+Provided template will deploy two AAD App Proxy connectors and register them with AAD App Proxy service:
 
-TO DO -> Create diagram and paste it here
+![DeployAADApProxy ](img/DeployAADApProxy.PNG)
 
 ### Deploy AAD App Proxy Connectors via ARM template using browser
 Use the following link to initiate deployment in your target Tenant/Subscription.

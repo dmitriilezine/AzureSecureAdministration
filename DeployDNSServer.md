@@ -11,9 +11,9 @@ This type of configuration might not be required for all deployments, but it is 
 :heavy_exclamation_mark: **Important:** Before running this deployment you need to swtich vNet DNS settings to use Azure DNS. This is needed because DNS deployment 
 needs to download DSC files and to do that it needs to resolve external names. If you do not switch vNet to use Azure DNS, then deployment will fail.
 
-Provided template will deploy the following configuration:
+Provided template will deploy DNS Server into DNS Subnet:
 
-TO DO -> Create diagram and paste it here
+![DeployDNS ](img/DeployDNSServer.PNG)
 
 
 ### Deploy DNS Server via Browser

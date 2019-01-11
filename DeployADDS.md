@@ -5,9 +5,9 @@ Active Directory Domain Services is the core application deployed in this soluti
 It should be deployed and managed in secure way.
 
 
-Provided template will deploy the following network configuration:
+Provided template will deploy two domain controllers for specified domain and one enterprise issuing CA:
 
-TO DO -> Create network diagram and paste it here
+![DeployADDS ](img/DeployADDS.PNG)
 
 
 ### Deploy ADDS via ARM template using browser

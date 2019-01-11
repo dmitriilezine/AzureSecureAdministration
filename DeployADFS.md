@@ -47,9 +47,9 @@ settings migrated from the source file. Currently, until this bug is fixed, you 
 
 ### Deploy ADFS Farm
 
-Provided template will deploy the following configuration:
+Provided template will deploy ADFS Farm with two ADFS servers:
 
-TO DO -> Create diagram and paste it here
+![DeployADFS ](img/DeployADFSFarm.PNG)
 
 ### Deploy ADFS via ARM template using browser
 Use the following link to initiate deployment in your target Tenant/Subscription.
