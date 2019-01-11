@@ -14,6 +14,11 @@ required by design. You might have as many as dozen or more resource groups asso
 Come up with good naming strategy to quickly identify all RGs and their purpose. For example using this naming template Rg-ADDS-"solution component"-Lab, you will have RGs like 
 Rg-ADDS-StorageAccounts-Lab, Rg-ADDS-AKVADE-Lab, Rg-ADDS-vNet-Lab, Rg-ADDS-ADDS-Lab etc
 
+:mega: All deployments have been tested for deployment with Subscription Contributor RBAC. Lower level RBAC was not used
+for any of the deployments. Lower level RBAC would require RBAC specific testing. 
+
+:mega: All deployments have been tested in US West 2 and US South Central only.
+
 ## Use the following steps to deploy ADDS in Azure IaaS and all related security components.
 
 :heavy_exclamation_mark: **Note: Most deployment templates in the following steps use Desired State Configuration (DSC) and PowerShell extenstions. 
