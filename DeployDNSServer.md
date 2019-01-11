@@ -1,3 +1,4 @@
+[Back to main page](DeploymentOutline.md)
 # Deploy DNS Server
 
 Many customers point their vNets to a DNS server that is not integrated in ADDS. At the same time ADDS is deployed with its own AD integrated DNS.
@@ -7,7 +8,7 @@ This way any device joined to the vNet will be able to find ADDS.
 
 This type of configuration might not be required for all deployments, but it is provided as part of this solution to accomodate for such specific common configuration.
 
-:heavy_exclamation_mark: **Important:** Before running this deployment you need to swtich vNet DNS settings to use Azure DNS. This is needed bacause DNS deployment 
+:heavy_exclamation_mark: **Important:** Before running this deployment you need to swtich vNet DNS settings to use Azure DNS. This is needed because DNS deployment 
 needs to download DSC files and to do that it needs to resolve external names. If you do not switch vNet to use Azure DNS, then deployment will fail.
 
 Provided template will deploy the following configuration:
@@ -18,7 +19,7 @@ TO DO -> Create diagram and paste it here
 ### Deploy DNS Server via Browser
 
 ```<language>
-https://portal.azure.com/microsoft.onmicrosoft.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-POC-DNSServer%2Fmaster%2FAzurePAW-POC-DNSServer%2Fazuredeploy.json
+https://portal.azure.com/microsoft.onmicrosoft.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-DNSServer%2Fmaster%2FAzurePAW-DNSServer%2Fazuredeploy.json
 ```
 
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 

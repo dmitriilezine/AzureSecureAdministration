@@ -1,3 +1,5 @@
+[Back to Title Page](Readme.md)
+
 # Secure Deployment and Management of ADDS in Azure IaaS - Implementation
 
 Note on Resource Group strategy: The deployment of the solution is broken down 
@@ -39,6 +41,10 @@ If you are not authorised then most deployments will not work.**
 17. Deploy Additional RDS Session Host 
 18. Deploy Additonal ADFS Server to existing ADFS farm
 19. Deploy addtional Active Directory Forest
+
+
+[Back to Title Page](Readme.md)
+
 
 
 	https://www.webfx.com/tools/emoji-cheat-sheet/
