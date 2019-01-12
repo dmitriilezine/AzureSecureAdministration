@@ -13,7 +13,7 @@ Use the following link to initiate deployment in your target Tenant/Subscription
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-AzureSQLdb%2Fmaster%2FAzurePAW-AzureSQLdb%2Fazuredeploy.json
 ```
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
-Pay extra attension to paramter vaules required by the deployment.
+Pay extra attention to parameter values required by the deployment.
 
 ### Deploy Azure SQL DB via PowerShell
 If you are planning to test deployment multiple times and run it against the same deployment or new deployment, 

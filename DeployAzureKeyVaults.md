@@ -3,13 +3,13 @@
 # Deploy Azure Key Vaults
 
 At least two key vaults will need to be deployed to support the solution. If VMs will be 
-deployed in multiple regions, then deploy addtional encryption key vaults in the 
+deployed in multiple regions, then deploy additional encryption key vaults in the 
 corresponding regions. Azure Disk Encryption requires Key Vaults to be in the same 
 region as VMs that will be encrypted.
 
 ### Deploy "Secrets AKV" into its own RG. This AKV will be used to store deployment secrets. 
 #### Key Vault name and Resource Group will be used in later deployments.
-Run the follwing PowerShell from the CloudShell to create the key vault in target subscription. 
+Run the following PowerShell from the CloudShell to create the key vault in target subscription. 
 
 ```
 # Create Azure Key Vault to be used for secrets. Update with appropriate names for your design
@@ -39,7 +39,7 @@ New-AzureRmKeyVault -VaultName $keyVaultName -ResourceGroupName $rgName -Locatio
 
 ### Deploy "Encryption AKV" into its own RG. This AKV will be used for VM encryption in the primary region.
 #### Key Vault name and Resource Group will be used in later deployments. 
-Run the follwing PowerShell from the CloudShell to create the key vault in target subscription.
+Run the following PowerShell from the CloudShell to create the key vault in target subscription.
 ```
 # Create Azure Key Vault to be used for Azure Disk Encryption. Update with appropriate names for your design
 $rgName = "ResourceGroupName-myADEAKV"

@@ -25,7 +25,7 @@ https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.github
 ```
 
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
-Pay extra attension to paramter vaules required by the deployment.
+Pay extra attention to parameter values required by the deployment.
 
 ### Deploy Jump Server via PowerShell
 

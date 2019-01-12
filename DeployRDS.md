@@ -14,7 +14,7 @@ Use the following link to initiate deployment in your target Tenant/Subscription
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-RDS%2Fmaster%2FAzurePAW-RDS%2Fazuredeploy.json
 ```
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
-Pay extra attension to paramter vaules required by the deployment.
+Pay extra attention to parameter values required by the deployment.
 
 ### Deploy RDS via PowerShell
 If you are planning to test deployment multiple times and run it against the same deployment or new deployment, 
@@ -35,7 +35,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 - 1 VM will be configured as RDS Connection Broker & Licensing Server
 - 1 VM will be configured as RDS Gateway & Web Access
 - 1 VM will be configured as RDS Session Host
-- Additonal 4 VMs will need to manually added to RDS configuration post deployment
+- Additional 4 VMs will need to manually added to RDS configuration post deployment
 - VMs for CB and GW (4 VMs) are placed on the RDS subnet
 - VMs for Session Hosts (3 VMs) are placed on the RDSSessionHosts subnet
 - VMs for Session Hosts (3 VMs) configured with RSAT tools to manage ADDS - need to identify any other required tools to be installed
@@ -43,7 +43,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 - Create ILB in front of RDS CB
 - Create ILB in front of RDS Gateway and Web
 - DNS records created pointing RDS and Gateway to respective IP addresses for each ILB
-- Download provided PFX certifcates to Connection Broker for postdeployment configuration
+- Download provided PFX certificates to Connection Broker for post deployment configuration
 - All VMs are domain joined, and considered Tier 0
 - It will encrypt each VM with ADE
 - It will configure each VM diagnostics with diagnostics storage account
@@ -66,12 +66,12 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
     - Expand RDS configuration - it should identify CB1 as Connection Broker/License Server, GW1 as Gateway and Web Access, and Host1 as Session Host
     - Add GW2 VM to both Gateway and Web Access roles
     - Add Host2 and Host3 VMs as sessions hosts to the AdminHost collection.
-    - Assign certificates. Certficaites were provided as part of deployment and you will find them on the C:\TempPFX folder. 
+    - Assign certificates. Certificates were provided as part of deployment and you will find them on the C:\TempPFX folder. 
     Assign gateway.domain.com cert to Gateway and Web Access roles, and rds.domain.com to CB and Publishing roles.
     - In AdminHost collection, remove domainusers and add appropriate T0 groups as able to authN.
     - In AdminHost collection, modify client settings (drivers, Smart card, Clip etc) as decided by design.
     - In Deployment Properties, RD Gateway properties, under Server Name field, replace with the external URL from the Azure AD App Proxy 
-    application that was configured in prior deployment (it will be somthing like rds-tenantname.msappproxy.net or your custom DNS name for it)
+    application that was configured in prior deployment (it will be something like rds-tenantname.msappproxy.net or your custom DNS name for it)
     - Open PowerShell and run the following command, which will configure SSO between Gateway and Web Access for the Azure AD Ap Proxy application
 
 ```<language>
@@ -86,8 +86,8 @@ Set-RDSessionCollectionConfiguration -CollectionName $yourcollectionname -Custom
     - You should now see RDS Web form for authentication
     - Provide ADDS credential that have been authorized to use RDS, you should be authenticated into one of the Session Hosts
   - Configure HA for Connection Broker
-    - Add High Availability to the CB, speficy ODBC connection string from the Azure SQL DB (which was deployed in one of the prior deployments)
-    - Update RDS certificate so it is instaled on the second CB VM
+    - Add High Availability to the CB, specify ODBC connection string from the Azure SQL DB (which was deployed in one of the prior deployments)
+    - Update RDS certificate so it is installed on the second CB VM
 
 
 References: 

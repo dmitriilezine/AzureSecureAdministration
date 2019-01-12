@@ -3,8 +3,8 @@
 # Deploy ADFS Farm into ADDS
 
 ### Prepare ADFS Federation Service Certificate for deployment
-- For production you can use trusted certficate from internal or external PKI authority. You'll need to have PFX file.
-- For test and lab deployment you can issue certifcate from the CA that is installed as 
+- For production you can use trusted certificate from internal or external PKI authority. You'll need to have PFX file.
+- For test and lab deployment you can issue certificate from the CA that is installed as 
 part of ADDS deployment. Use "Azure PAW Web Server" certificate template to issue custom certificate and save it as PFX.
 - Push PFX file with ADFS federation service certificate to the "Secrets Key Vault". It will be installed on ADFS VMs 
 during VM deployment and then used by ADFS installation as the Federation Service certificate.
@@ -57,7 +57,7 @@ Use the following link to initiate deployment in your target Tenant/Subscription
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-ADFS%2Fmaster%2FAzurePAW-ADFS%2Fazuredeploy.json
 ```
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
-Pay extra attension to paramter vaules required by the deployment.
+Pay extra attention to parameter values required by the deployment.
 
 ### Deploy ADFS via PowerShell
 If you are planning to test deployment multiple times and run it against the same deployment or new deployment, 
@@ -74,8 +74,8 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 
 ```
 ### This deployment will do the following:
-- Install 2 Windows 2016 Server VMs and 
-- Configure them as ADFS farm with WID as DB. Federation Certficate pushed to the Key Vault is installed and used as ADFS Fed Service
+- Install 2 Windows 2016 Server VMs
+- Configure them as ADFS farm with WID as DB. Federation Certificate fetched from the Key Vault and installed/used as ADFS Fed Service certificate
 - Both VMs are domain joined, and considered Tier 0
 - Both VMs are placed on ADFS subnet
 - Create ILB in front of ADFS farm
@@ -90,7 +90,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 - Perform post configuration:
   - Reset ADFS service account pwd and move it to the Tier 0 Service Accounts OU
   - Move ADFS VMs to the Tier 0 Identity OUs
-- DNS Admin to create DNS record for ADFS federation service poiting to the ADFS ILB IP address
+- DNS Admin to create DNS record for ADFS federation service pointing to the ADFS ILB IP address
 - Perform ADFS configuration as required by the ADFS design (IdPs, RPs, claim rules etc)
 					
 

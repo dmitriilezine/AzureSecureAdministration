@@ -2,13 +2,13 @@
 # Deploy DNS Server
 
 Many customers point their vNets to a DNS server that is not integrated in ADDS. At the same time ADDS is deployed with its own AD integrated DNS.
-To simulate this configuration in this solution we need to deploy a separate DNS server that can act the the "3rd party" DNS. 
+To simulate this configuration in this solution we need to deploy a separate DNS server that can act as "3rd party" DNS. 
 vNet DNS configured to point to this DNS server. This DNS server is configured with conditional forwarder that points to the ADDS DNS.
 This way any device joined to the vNet will be able to find ADDS. 
 
-This type of configuration might not be required for all deployments, but it is provided as part of this solution to accomodate for such specific common configuration.
+This type of configuration might not be required for all deployments, but it is provided as part of this solution to accommodate for such specific common configuration.
 
-:heavy_exclamation_mark: **Important:** Before running this deployment you need to swtich vNet DNS settings to use Azure DNS. This is needed because DNS deployment 
+:heavy_exclamation_mark: **Important:** Before running this deployment you need to switch vNet DNS settings to use Azure DNS. This is needed because DNS deployment 
 needs to download DSC files and to do that it needs to resolve external names. If you do not switch vNet to use Azure DNS, then deployment will fail.
 
 Provided template will deploy DNS Server into DNS Subnet:
@@ -23,7 +23,7 @@ https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.github
 ```
 
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
-Pay extra attension to paramter vaules required by the deployment.
+Pay extra attention to parameter values required by the deployment.
 
 ### Deploy DNS Server via PowerShell
 

@@ -6,7 +6,7 @@
 
 Properly designed and implemented network is the baseline foundation to secure implementation. 
 The following template provides an example of vNet implementation for this solution. It might need to be modified 
-to accomodate specific requirements of your customer test/pre-prod/prod network environment.
+to accommodate specific requirements of your customer test/pre-prod/prod network environment.
 
 The main goal behind this design is to provide micro-segmentation between different solution components.
 This is done by creating multiple subnets with dedicated Network Security Groups (NSGs). NSGs configured to control 
@@ -44,7 +44,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 
 ```
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
-Pay extra attension to paramter vaules required by the deployment.
+Pay extra attention to parameter values required by the deployment.
 
 ### This deployment will do the following:
 1. Create vNet

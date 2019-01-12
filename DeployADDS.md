@@ -2,7 +2,6 @@
 
 # Deploy ADDS
 Active Directory Domain Services is the core application deployed in this solution. 
-It should be deployed and managed in secure way.
 
 
 Provided template will deploy two domain controllers for specified domain and one enterprise issuing CA:
@@ -16,7 +15,7 @@ Use the following link to initiate deployment in your target Tenant/Subscription
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-ADDS%2Fmaster%2FAzurePAW-ADDS%2Fazuredeploy.json
 ```
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
-Pay extra attension to paramter vaules required by the deployment.
+Pay extra attention to parameter values required by the deployment.
 
 ### Deploy ADDS via PowerShell
 If you are planning to test deployment multiple times and run it against the same deployment or new deployment, 
@@ -37,7 +36,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 - Both VMs configured as DNS servers.
 - DIAD ImportExportAD package is applied to ADDS. This creates Tier 0, 1, 2 OUs/GPOs
 - Install 1 Windows 2016 Server VM with ADCS role. Enterprise Root Issuing CA. Adds a few custom certificate templates that can be used for certificate enrollment in this environment. 
-- All VMs are joined to DomainControllers Subnet
+- All VMs are joined to Domain Controllers Subnet
 - It will encrypt each VM with ADE
 - It will configure each VM diagnostics with diagnostics storage account
 - It will install Microsoft antivirus extension in each VM

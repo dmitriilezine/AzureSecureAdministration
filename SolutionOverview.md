@@ -22,7 +22,7 @@ and should not be redirected into application guard, use of USB ports, antivirus
 or specific target Azure AD application from the user device. If device is deemed to be not compliant with specified policies then user 
 will be denied access to Azure control plane or target application.
 
-By using Azure PAW for all critical Azure AD privileged identities, we can provide higher security posture for mamagement of Azure Virtual Datacenter.
+By using Azure PAW for all critical Azure AD privileged identities, we can provide higher security posture for management of Azure Virtual Datacenter.
 
 The design of the controls and deployment for Azure PAW is being done in parallel and is not documented here.
 
@@ -30,14 +30,14 @@ The design of the controls and deployment for Azure PAW is being done in paralle
 
 Most customers deploy a combination of SaaS, PaaS and IaaS applications in Azure. SaaS and PaaS applications usually do not 
 require OS level management, as they are natively integrated into Azure and managed via provided by Azure controls, specific 
-to that application. Administration of SaaS and PaaS is usualy done via Azure AD accounts with proper application RBAC assigned to them.
+to that application. Administration of SaaS and PaaS is usually done via Azure AD accounts with proper application RBAC assigned to them.
 Azure PAW in combination with DevOps can be used to provide secure administration of such applications.
 
 It is not the same for the majority of IaaS based workloads, as they require deployment of traditional servers, running Windows or Linux
 operating systems. Almost every customer has deployed, deploying or planning to deploy Active Directory into their Azure IaaS environment.
 
 Secure management of IaaS requires secure deployment of the applications and then secure access at operating system level, which 
-in most cases uses OS level credentials, like Active Directoty accounts. These accounts are subejct to theft and malicious use by the 
+in most cases uses OS level credentials, like Active Directory accounts. These accounts are subject to theft and malicious use by the 
 bad actors.
 
 #### Goal Behind Secure Management of Azure Virtual Datacenter solution
@@ -46,11 +46,11 @@ bad actors.
 - It relies on the Azure PAW to provide secure access to the target applications at OS level, specifically for Tier 0 access to ADDS and Tier 0 applications
 - It is designed with Zero Trust Networks principals, using Azure AD Identity as a security perimeter
 - It is designed to be independent from existing on-premises infrastructure. 
-- It is designed with granular deployment approach, to allow plug-in implementation of addtional critical applications, like ADFS, AADCoonnect or other applications. 
+- It is designed with granular deployment approach, to allow plug-in implementation of additional critical applications, like ADFS, AADCoonnect or other applications. 
 
 The following diagrams show logical view
 ![SecureADDSinAzure ](img/ADDSinAzureLogical.PNG)
-Admininistrator uses Azure PAW to authenticate to Azure AD. Administrator access to ADDS Tier 0 via Azure AD published
+Administrator uses Azure PAW to authenticate to Azure AD. Administrator access to ADDS Tier 0 via Azure AD published
 application for secure jump server solution. 
 ![SecureADDSinAzure ](img/ADDSinAzureLogical1.PNG)
 Secure jump server solution currently based on the Windows 2016 Remote Desktop Services (RDS). The following diagram shows design 
@@ -63,7 +63,7 @@ According to RDS documentation it is possible to use dedicated Hosts for each Ad
 ![RDS1 ](img/RDS2.PNG)
 
 #### Implementing Secure Management of Azure Virtual Datacenter solution
-Implementation of the solution is designed to be "infrastracture as a code" as much as possible. 
+Implementation of the solution is designed to be "infrastructure as a code" as much as possible. 
 Azure resource manager templates with Desired State Configuration and custom script extensions are used for majority of the 
 deployments. Manual steps are eliminated whenever possible. By doing automated deployments, it provides consistent and 
 predictable deployment results.
