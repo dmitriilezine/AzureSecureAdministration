@@ -42,7 +42,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
 ```
 ### This deployment will do the following:
 - Install Windows 2016 Server VM, install DNS role on it and configure conditional forwarder for provided DNS name and IP address (should be the first ADDS DC)
-- It will join VM to the DNSServer subnet
+- It will put VM on the DNS Server subnet
 - It will encrypt VM with ADE
 - It will configure VM diagnostics with diagnostics storage account
 - It will install Microsoft antivirus extension

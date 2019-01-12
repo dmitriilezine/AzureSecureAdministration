@@ -36,10 +36,11 @@ at individual RG level was not tested for any of the deployments. Lower level RB
 :mega: All deployments have been tested in US West 2 and US South Central only.
 
 ##
-1. [Deploy Azure Key Vaults](DeployAzureKeyVaults.md)
-2. Identify Log Analytics workspace used by the Azure Security Center for the target Azure subscription. 
-    This workspace will be used to log data from deployed resoucres. If Azure Security Center is not enabled then it will need to be enabled. Recommend to use Standard pricing tier to get all advanced features of ASC.
-3. [Deploy storage accounts](DeployStorageAccounts.md)
+1. Identify Log Analytics workspace used by the Azure Security Center for the target Azure subscription. 
+    This workspace will be used to log data from deployed resoucres. If Azure Security Center (ASC) is not enabled then it will need to be enabled. 
+Recommend to use Standard pricing tier to get all advanced features of ASC.
+2. [Deploy storage accounts](DeployStorageAccounts.md)
+3. [Deploy Azure Key Vaults](DeployAzureKeyVaults.md)
 4. [Deploy vNet](DeployvNet.md)
 5. [Deploy DNS Server](DeployDNSServer.md)
 6. [Deploy Active Directory](DeployADDS.md)
@@ -48,6 +49,7 @@ at individual RG level was not tested for any of the deployments. Lower level RB
 9. [Deploy Azure SQL DB for RDS HA](DeployAzureSQL.md)
 10. [Deploy RDS](DeployRDS.md)
 11. [Post ADDS and RDS Deployment configuration](PostADDSConfig.md)
+12. [Configure Monitoring](ConfigureMonitoring.md)
 12. [Deploy ADFS](DeployADFS.md)
 13. [Deploy ADFS Proxy](DeployADFSProxy.md)
 14. [Deploy AAD Connect](DeployAADConnect.md) 
