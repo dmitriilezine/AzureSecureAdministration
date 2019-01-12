@@ -22,6 +22,9 @@ https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.github
 ### This deployment will do the following:
 - This ARM template will create four storage accounts. 
 
+####
+####
+####
 
 >**Note:** If your Azure AD account has access to multiple tenants/subscriptions, and when you click on the URL it targets wrong tenant, you will need to insert your desired tenant into the url as follows:
 
