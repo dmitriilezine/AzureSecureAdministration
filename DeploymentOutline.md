@@ -30,8 +30,9 @@ If you are not authorized user then most deployments will not work.**
 :boom: If it is not obvious, the following deployments put in order to support other deployments. Deployments will ask for required parameters,
 most of which correspond to other already existing resources, like Vnet, Subnets, Key Vaults, Storage accounts etc. 
 
-:mega: All deployments have been tested for deployment with Subscription Contributor RBAC. Lower level RBAC at subscription level or RBAC set 
-at individual RG level was not tested for any of the deployments. Lower level RBAC would require RBAC specific testing.
+:mega: All deployments have been tested with Subscription Contributor RBAC. Lower level RBAC at subscription level or RBAC set 
+at individual RG level was not tested for any of the deployments. Lower level RBAC would require RBAC specific testing to identify exact RBAC 
+that need to be set at each RG level.
 
 :mega: All deployments have been tested in US West 2 and US South Central only.
 

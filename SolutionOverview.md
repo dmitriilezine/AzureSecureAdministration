@@ -55,7 +55,13 @@ application for secure jump server solution.
 ![SecureADDSinAzure ](img/ADDSinAzureLogical1.PNG)
 Secure jump server solution currently based on the Windows 2016 Remote Desktop Services (RDS). The following diagram shows design 
 for RDS as it is implemented in this solution. 
-> Azure Remote Desktop will need to be evaluated in the coming months to see if it can replace RDS
+> [Azure Windows Virtual Desktop](https://azure.microsoft.com/en-us/services/virtual-desktop/) will need to be evaluated in the coming months to see if it can replace RDS. It should GA sometime in CY19
+
+
+> Note on Point to Site VPN: 
+> - [Azure native Point-to-Site VPN](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) does not support authentication via AAD Identity and use of AAD Conditional Access. It can be implemented as optional add-on to provide emergency access to the environment, but it is not used as primary access choice.
+> - [Azure RADIUS Point-to-Site VPN](https://docs.microsoft.com/en-us/azure/vpn-gateway/point-to-site-how-to-radius-ps) does not support authentication via AAD Identity and use of AAD Conditional Access. It is not provided as deployment in this solution.
+> - [Always On VPN supports Azure AD Conditional Access](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/ad-ca-vpn-connectivity-windows10), but it is [not supported for installation in Azure](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy), so not a choice to provide access to Azure without dependency on on-premises environment
 
 Currently using shared collection for Admin Hosts
 ![RDS1 ](img/RDS1.PNG)
