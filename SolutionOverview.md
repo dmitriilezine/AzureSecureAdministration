@@ -58,10 +58,20 @@ for RDS as it is implemented in this solution.
 > [Azure Windows Virtual Desktop](https://azure.microsoft.com/en-us/services/virtual-desktop/) will need to be evaluated in the coming months to see if it can replace RDS. It should GA sometime in CY19
 
 
-> Note on Point-to-Site VPN: 
-> - [Azure native Point-to-Site VPN](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) does not support authentication via AAD Identity and use of AAD Conditional Access. It can be implemented as optional add-on to provide emergency access to the environment, but it is not used as primary access choice.
-> - [Azure RADIUS Point-to-Site VPN](https://docs.microsoft.com/en-us/azure/vpn-gateway/point-to-site-how-to-radius-ps) does not support authentication via AAD Identity and use of AAD Conditional Access. It is not provided as deployment in this solution.
+> Note on Point-to-Site VPN use: 
 > - [Always On VPN supports Azure AD Conditional Access](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/ad-ca-vpn-connectivity-windows10), but it is [not supported for installation in Azure](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy), so not a choice to provide access to Azure without dependency on on-premises environment
+> - [Azure native Point-to-Site VPN](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) does not support authentication via AAD Identity and use of AAD Conditional Access. It requires client certificates to be installed on the Azure PAW and requires installation of the VPN client. 
+> While use of native Point-to-Site VPN can be combined with use of Azure Security Center VM Just-in-Time access, which would requrie to pass through AAD Conditional Access for user to activate it, 
+> the requirement to have client certificate and installation of the VPN profile on the Azure PAW makes this option not feasible choice to provide enterprise Tier 0 level access to resources in Azure Virtual Datacenter.
+>
+> - [Azure RADIUS Point-to-Site VPN](https://docs.microsoft.com/en-us/azure/vpn-gateway/point-to-site-how-to-radius-ps) does not support 
+> authentication via AAD Identity and use of AAD Conditional Access. This option supports authentication via certificate or userID/password (ADDS or other directory). 
+> It can also be integrated with Azure MFA. It requires installation of the VPN profile on the Azure PAW, but does not have dependency on the internal enterprise PKI, if userID/password is used. 
+> It also can be used with Azure Security Center VM Just-in-Time access.
+> > - RADIUS Point-to-Site VPN should be considered as another potential option to provide Tier 0 level of access to the IaaS of Azure Virtual Datacenter. 
+> > - Currently, this solution does not provide automation deployment of RADIUS Point-to-Site VPN. It has to be evaluated on what needs to be done and all of 
+> > the dependecnies and requirements for such deployment to support stated requirements of solution to have no dependencies on the on-premises environment and use Azure AD identities as the security perimeter.
+
 
 Current design is using shared collection for Admin Hosts.
 ![RDS1 ](img/RDS1.PNG)
