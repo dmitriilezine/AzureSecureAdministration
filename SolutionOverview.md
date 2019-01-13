@@ -76,9 +76,14 @@ for RDS as it is implemented in this solution.
 > > - Currently, this solution does not provide deployment option of RADIUS Point-to-Site VPN.
 
 
-Current design is using shared collection for Admin Hosts.
+RDS based access via Azure AD App Proxy supports stated requirements. It supports use of Azure AD identity as security perimeter, 
+it provides secure access to the Tier 0 in the target environment and allows use of the common RSAT tools to manage it.
+RDS solution is joined to the Active Directory and implemented in high availability configuration. 
+Current design is using shared collection for session hosts, which will act the the primary interface to manage Tier 0.
 ![RDS1 ](img/RDS1.PNG)
-According to RDS documentation it is possible to use dedicated Hosts for each Admin. This would need to be tested...
+According to RDS documentation it is possible to use dedicated Hosts for each Admin. 
+This would need to be tested... Use of dedicated session hosts for specific Tier 0 admins would provide tigher access control
+and audit history. Also, with dedicated session hosts it will be possible to provide targeted Azure Security Center VM Just-in-Time access to the Tier 0 servers.
 ![RDS1 ](img/RDS2.PNG)
 
 #### Implementing Secure Management of Azure Virtual Datacenter solution
