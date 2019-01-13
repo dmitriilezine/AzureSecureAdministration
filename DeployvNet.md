@@ -41,7 +41,6 @@ $ParFile = "C:\data\vNet-parametersFile.json"
 
 Login-AzureRmAccount
 New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI -TemplateParameterFile $ParFile
-
 ```
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
 Pay extra attention to parameter values required by the deployment.
