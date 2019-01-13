@@ -67,11 +67,13 @@ for RDS as it is implemented in this solution.
 >
 > - [Azure RADIUS Point-to-Site VPN](https://docs.microsoft.com/en-us/azure/vpn-gateway/point-to-site-how-to-radius-ps) does not support 
 > authentication via AAD Identity and use of AAD Conditional Access. This option supports authentication via certificate or userID/password (ADDS or other directory). 
-> It can also be integrated with Azure MFA. It requires installation of the VPN profile on the Azure PAW, but does not have dependency on the internal enterprise PKI, if userID/password is used. 
+> It can also be [integrated with Azure MFA](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-nps-extension#install-the-nps-extension). It requires installation of the VPN profile on the Azure PAW, but does not have dependency on the internal enterprise PKI, if userID/password is used. 
 > It also can be used with Azure Security Center VM Just-in-Time access.
 > > - RADIUS Point-to-Site VPN should be considered as another potential option to provide Tier 0 level of access to the IaaS of Azure Virtual Datacenter. 
-> > - Currently, this solution does not provide automation deployment of RADIUS Point-to-Site VPN. It has to be evaluated on what needs to be done and all of 
-> > the dependencies and requirements for such deployment to support stated requirements of solution to have no dependencies on the on-premises environment and use Azure AD identities as the security perimeter.
+> > It has to be evaluated on what needs to be done and all of the dependencies and requirements for such deployment to support stated requirements of solution 
+> > to have no dependencies on the on-premises environment, use of Azure AD joined PAW (no SSO from it to the ADDS Tier 0 - 
+> > no easy way to use RSAT tools to manage Tier 0) and use Azure AD identities as the security perimeter.
+> > - Currently, this solution does not provide deployment option of RADIUS Point-to-Site VPN.
 
 
 Current design is using shared collection for Admin Hosts.
