@@ -46,7 +46,7 @@ bad actors.
 - It relies on the Azure PAW to provide secure access to the target applications at OS level, specifically for Tier 0 access to ADDS and Tier 0 applications
 - It is designed with Zero Trust Networks principals, using Azure AD Identity as a security perimeter
 - It is designed to be independent from existing on-premises infrastructure. 
-- It is designed with granular deployment approach, to allow plug-in implementation of additional critical applications, like ADFS, AADCoonnect or other applications. 
+- It is designed with granular deployment approach, to allow plug-in implementation of additional critical applications, like ADFS, AADConnect or other applications. 
 
 The following diagrams show logical view
 ![SecureADDSinAzure ](img/ADDSinAzureLogical.PNG)
@@ -58,16 +58,18 @@ for RDS as it is implemented in this solution.
 > [Azure Windows Virtual Desktop](https://azure.microsoft.com/en-us/services/virtual-desktop/) will need to be evaluated in the coming months to see if it can replace RDS. It should GA sometime in CY19
 
 
-> **Note on Point-to-Site VPN use:** 
+> **Note on Point-to-Site VPN. Why use RDS and not VPN?** 
 > - [Always On VPN supports Azure AD Conditional Access](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/ad-ca-vpn-connectivity-windows10), but it is [not supported for installation in Azure](https://docs.microsoft.com/en-us/windows-server/remote/remote-access/vpn/always-on-vpn/deploy/always-on-vpn-deploy), 
 > so not a choice to provide access to Azure without dependency on on-premises environment.
-> - [Azure native Point-to-Site VPN](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) does not support authentication via AAD Identity and use of AAD Conditional Access. It requires client certificates to be installed on the Azure PAW and requires installation of the VPN client. 
+> - [Azure native Point-to-Site VPN](https://docs.microsoft.com/en-us/azure/vpn-gateway/vpn-gateway-howto-point-to-site-resource-manager-portal) does not support authentication via AAD Identity 
+> and use of AAD Conditional Access. It requires soft client certificates (does not support Smart Card) to be installed on the Azure PAW and requires installation of the VPN client. 
 > While use of native Point-to-Site VPN can be combined with use of Azure Security Center VM Just-in-Time access, which would requrie to pass through AAD Conditional Access for user to activate it, 
-> the requirement to have client certificate and installation of the VPN profile on the Azure PAW makes this option not feasible choice to provide enterprise Tier 0 level access to resources in Azure Virtual Datacenter.
+> the requirement to have soft client certificate and installation of the VPN profile on the Azure PAW makes this option not feasible choice to provide enterprise Tier 0 level access to resources in Azure Virtual Datacenter.
 >
 > - [Azure RADIUS Point-to-Site VPN](https://docs.microsoft.com/en-us/azure/vpn-gateway/point-to-site-how-to-radius-ps) does not support 
 > authentication via AAD Identity and use of AAD Conditional Access. This option supports authentication via certificate or userID/password (ADDS or other directory). 
-> It can also be [integrated with Azure MFA](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-nps-extension#install-the-nps-extension). It requires installation of the VPN profile on the Azure PAW, but does not have dependency on the internal enterprise PKI, if userID/password is used. 
+> It can also be [integrated with Azure MFA](https://docs.microsoft.com/en-us/azure/active-directory/authentication/howto-mfa-nps-extension#install-the-nps-extension). 
+> It requires installation of the VPN profile on the Azure PAW, but does not have dependency on the internal enterprise PKI, if userID/password is used for authentication. 
 > It also can be used with Azure Security Center VM Just-in-Time access.
 > > - RADIUS Point-to-Site VPN should be considered as another potential option to provide Tier 0 level of access to the IaaS of Azure Virtual Datacenter. 
 > > It has to be evaluated on what needs to be done and all of the dependencies and requirements for such deployment to support stated requirements of solution 
