@@ -26,7 +26,7 @@ being configured and hardened. NSG rules in the template would need to be modifi
 ### Deploy vNet via ARM template using browser
 Use the following link to initiate deployment in your target Tenant/Subscription.
 ```<language>
-TO DO -> provide vNet URL here 
+https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-vNet11%2Fmaster%2FAzurePAW-vNet11%2Fazuredeploy.json 
 ```
 
 ### Deploy via PowerShell
@@ -36,7 +36,7 @@ first fill in the values for each required parameter then save the parameter fil
 
 ```<language>
 $RGName = "vNetResourceGroupName" #must be present. if not create it prior to running this script
-$URI = "https://raw.githubusercontent.com/dmitriilezine/AzurePAW-vNet10/master/AzurePAW-vNet10/azuredeploy.json"
+$URI = "https://raw.githubusercontent.com/dmitriilezine/AzurePAW-vNet11/master/AzurePAW-vNet11/azuredeploy.json"
 $ParFile = "C:\data\vNet-parametersFile.json"
 
 Login-AzureRmAccount
