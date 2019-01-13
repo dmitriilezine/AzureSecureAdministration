@@ -88,7 +88,7 @@ This would need to be tested... Use of dedicated session hosts for specific Tier
 and audit history. Also, with dedicated session hosts it will be possible to provide targeted Azure Security Center VM Just-in-Time access to the Tier 0 servers.
 ![RDS1 ](img/RDS2.PNG)
 
-#### Implementing Secure Management of Azure Virtual Datacenter solution
+### Implementing Secure Management of Azure Virtual Datacenter solution
 Implementation of the solution is designed to be "infrastructure as a code" as much as possible. 
 Azure resource manager templates with Desired State Configuration and custom script extensions are used for majority of the 
 deployments. Manual steps are eliminated whenever possible. By doing automated deployments, it provides consistent and 
