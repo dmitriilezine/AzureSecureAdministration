@@ -24,7 +24,7 @@ prevent any potential attack on the environment from internal customer network (
 being configured and hardened. NSG rules in the template would need to be modified to accommodate this deployment consideration.
 
 ### Deploy vNet via ARM template using browser
-Use the following link to initiate deployment in your target Tenant/Subscription.
+Use the following link to initiate vNet deployment in your target Tenant/Subscription.
 ```<language>
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-vNet11%2Fmaster%2FAzurePAW-vNet11%2Fazuredeploy.json 
 ```
