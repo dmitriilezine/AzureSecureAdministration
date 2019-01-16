@@ -81,8 +81,8 @@ for RDS as it is implemented in this solution.
 >
 > - It is possible to open dedicated Jump Server VMs via Azure Security Center Just-in-Time VM access. The main concern with this configuration is that it is not possible to 
 > guarantee that only the specified source device will be able to access this Jump Server. Just-in-Time allows to specify source IP address - which is a public IP addrerss of the device. Depending on where this 
-> device is located, it might be behind IP that would allow other device to be presented to Azure by the same IP. Administrtor can then easily use another system to RDP into the 
-> Jump server. Also, Just-in-Time allows to specify source subnet CIDR range, which would allow to use any device from that range to connect to the Jummp Server. Based on this, using ASC Just-in-time is not an option 
+> device is located, it might be behind IP that would allow other device to be presented to Azure by the same IP. Administrator can then easily use another system to RDP into the 
+> Jump server. Also, Just-in-Time allows to specify source subnet CIDR range, which would allow to use any device from that range to connect to the Jump Server. Based on this, using ASC Just-in-time is not an option 
 > to provide access to the environment for privileged access worksstation. 
 
 
