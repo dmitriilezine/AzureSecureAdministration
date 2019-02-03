@@ -40,7 +40,7 @@ Secure management of IaaS requires secure deployment of the applications and the
 in most cases uses OS level credentials, like Active Directory accounts. These accounts are subject to theft and malicious use by the 
 bad actors.
 
-#### Goal Behind Secure Management of Azure Virtual Datacenter solution
+#### Goals Behind Secure Management of Azure Virtual Datacenter solution
 - The goal behind this solution is to provide secure implementation and management of Active Directory in Azure Virtual Datacenter.
 - It relies on the Azure PAW to provide secure control over the Azure control plane, thus ensuring that IaaS resources are not compromised via Azure AD credentials
 - It relies on the Azure PAW to provide secure access to the target applications at OS level, specifically for Tier 0 access to ADDS and Tier 0 applications
