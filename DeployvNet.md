@@ -25,7 +25,7 @@ being configured and hardened. NSG rules in the template would need to be modifi
 
 ### Deploy vNet via ARM template using browser
 Use the following link to initiate vNet deployment in your target Tenant/Subscription.
-```<language>
+```PS
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-vNet11%2Fmaster%2FAzurePAW-vNet11%2Fazuredeploy.json 
 ```
 
@@ -34,7 +34,7 @@ If you are planning to test deployment multiple times and run it against the sam
 to save time it is recommended to save your custom parameters to the parameters file. You can do this on the first browser deployment, 
 first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement vNet.
 
-```<language>
+```PS
 $RGName = "vNetResourceGroupName" #must be present. if not create it prior to running this script
 $URI = "https://raw.githubusercontent.com/dmitriilezine/AzurePAW-vNet11/master/AzurePAW-vNet11/azuredeploy.json"
 $ParFile = "C:\data\vNet-parametersFile.json"
@@ -62,7 +62,7 @@ It is important to log diagnostics and network flow data for each NSG.
 You can use the following PowerShell script to configure it. Run it from the CloudShell targeting individually each NSG. 
 
 
-```<language>
+```PS
 # Configure NSG with diagnostics and network watcher
 # Update parameters to match your design
 

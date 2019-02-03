@@ -12,7 +12,7 @@ during VM deployment and then used by ADFS installation as the Federation Servic
   - Copy PFX file to the CloudDrive in CloudShell
   - In CloudShell change folder to the CloudDrive and verify that the file is there
   - In CloudShell run the following PowewrShell, after updating parameters
-```<language>
+```PS
 $vaultName = "SecretsKeyVault"     # this is Secrets Key Vault created in prior steps
 $secretName = "ADFSCert"           # name of the secret that will be created in Key Vault and hold the PFX data
 $certPassword = "password"         # PFX file password
@@ -53,7 +53,7 @@ Provided template will deploy ADFS Farm with two ADFS servers:
 
 ### Deploy ADFS via ARM template using browser
 Use the following link to initiate deployment in your target Tenant/Subscription.
-```<language>
+```PS
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-ADFS%2Fmaster%2FAzurePAW-ADFS%2Fazuredeploy.json
 ```
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
@@ -64,7 +64,7 @@ If you are planning to test deployment multiple times and run it against the sam
 to save time it is recommended to save your custom parameters to the parameters file. You can do this on the first browser deployment, 
 first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement ADFS farm.
 
-```<language>
+```PS
 $RGName = "ADFS-ResourceGroupName" #must be present. if not create it prior to running this script
 $URI = "https://raw.githubusercontent.com/dmitriilezine/AzurePAW-ADFS/master/AzurePAW-ADFS/azuredeploy.json"
 $ParFile = "C:\data\ADFS-parametersFile.json"
