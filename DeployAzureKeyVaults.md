@@ -11,7 +11,7 @@ region as VMs that will be encrypted.
 #### Key Vault name and Resource Group will be used in later deployments.
 Run the following PowerShell from the CloudShell to create the key vault in target subscription. 
 
-```PS
+```PowerShell
 # Create Azure Key Vault to be used for secrets. Update with appropriate names for your design
 $rgName = "ResourceGroupName-mySecretsAKV"
 $location ="SpecifyRegion"
