@@ -22,7 +22,7 @@ Provided template will deploy two AAD App Proxy connectors and register them wit
 
 ### Deploy AAD App Proxy Connectors via ARM template using browser
 Use the following link to initiate deployment in your target Tenant/Subscription.
-```<language>
+```PS
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-ADDProxy%2Fmaster%2FAzurePAW-ADDProxy%2Fazuredeploy.json
 ```
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
@@ -33,7 +33,7 @@ If you are planning to test deployment multiple times and run it against the sam
 to save time it is recommended to save your custom parameters to the parameters file. You can do this on the first browser deployment, 
 first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement AAD App Proxy Connectors.
 
-```<language>
+```PS
 $RGName = "ADDProxy-ResourceGroupName" #must be present. if not create it prior to running this script
 $URI = "https://raw.githubusercontent.com/dmitriilezine/AzurePAW-ADDProxy/master/AzurePAW-ADDProxy/azuredeploy.json"
 $ParFile = "C:\data\ADDProxy-parametersFile.json"
