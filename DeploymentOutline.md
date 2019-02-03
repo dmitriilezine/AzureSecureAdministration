@@ -49,7 +49,7 @@ Recommend to use Standard pricing tier to get all advanced features of ASC.
 8. Deploy "Identity as Perimeter" access to ADDS. Chose one of the following based on your design decision. 
     
     **High Availability Solution**   
-    8.1 [Deploy AAD Application Proxy](DeployAADApProxy.md) 
+    8.1 [Deploy AAD Application Proxy](DeployAADApProxy.md)     
     8.2 [Deploy Azure SQL DB for RDS HA](DeployAzureSQL.md)     
     8.3 [Deploy RDS](DeployRDS.md) 
 
