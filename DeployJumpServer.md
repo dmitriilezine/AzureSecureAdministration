@@ -20,7 +20,7 @@ Provided template will deploy temp Jump Server:
 
 ### Deploy Jump Server via Browser
 Use the following link to initiate deployment in your target Tenant/Subscription.
-```PS
+```PowerShell
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-POC-JumpServer%2Fmaster%2FAzurePAW-POC-JumpServer%2Fazuredeploy.json
 ```
 
@@ -33,7 +33,7 @@ If you are planning to test deployment multiple times and run it against the sam
 to save time it is recommended to save your custom parameters to the parameters file. You can do this on the first browser deployment, 
 first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement Jump Server.
 
-```PS
+```PowerShell
 $RGName = "JumpServer-ResourceGroupName" #must be present. if not create it prior to running this script
 $URI = "https://raw.githubusercontent.com/dmitriilezine/AzurePAW-POC-JumpServer/master/AzurePAW-POC-JumpServer/azuredeploy.json"
 $ParFile = "C:\data\JumpServer-parametersFile.json"

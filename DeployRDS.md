@@ -10,7 +10,7 @@ Provided template will deploy RDS servers and load balancers:
 
 ### Deploy RDS via ARM template using browser
 Use the following link to initiate deployment in your target Tenant/Subscription.
-```PS
+```PowerShell
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-RDS%2Fmaster%2FAzurePAW-RDS%2Fazuredeploy.json
 ```
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
@@ -21,7 +21,7 @@ If you are planning to test deployment multiple times and run it against the sam
 to save time it is recommended to save your custom parameters to the parameters file. You can do this on the first browser deployment, 
 first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement RDS.
 
-```PS
+```PowerShell
 $RGName = "RDS-ResourceGroupName" #must be present. if not create it prior to running this script
 $URI = "https://raw.githubusercontent.com/dmitriilezine/AzurePAW-RDS/master/AzurePAW-RDS/azuredeploy.json"
 $ParFile = "C:\data\RDS-parametersFile.json"
@@ -74,7 +74,7 @@ New-AzureRmResourceGroupDeployment -ResourceGroupName $RGName -TemplateUri $URI 
     application that was configured in prior deployment (it will be something like rds-tenantname.msappproxy.net or your custom DNS name for it)
     - Open PowerShell and run the following command, which will configure SSO between Gateway and Web Access for the Azure AD Ap Proxy application
 
-```PS
+```PowerShell
 $yourcollectionname = "AdminHost" #collection name
 $proxyfrontendurl = "https://rds-tenantname.msappproxy.net/" #replace with your external URL for the app
 Set-RDSessionCollectionConfiguration -CollectionName $yourcollectionname -CustomRdpProperty "pre-authentication server address:s:$proxyfrontendurl`nrequire pre-authentication:i:1"

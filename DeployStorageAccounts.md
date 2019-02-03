@@ -15,7 +15,7 @@ For this solution, currently we deploy four storage accounts:
 - Key Vault diagnostics
 
 Use the following link to initiate deployment in your target Tenant/Subscription.
-```PS
+```PowerShell
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-StorageAccounts%2Fmaster%2FAzurePAW-StorageAccounts%2Fazuredeploy.json
 ```
 ####	
@@ -28,7 +28,7 @@ https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.github
 
 >**Note:** If your Azure AD account has access to multiple tenants/subscriptions, and when you click on the URL it targets wrong tenant, you will need to insert your desired tenant into the url as follows:
 
-```PS
+```PowerShell
 https://portal.azure.com/YOURTARGETTENANT.ONMICROSOFT.COM/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-StorageAccounts%2Fmaster%2FAzurePAW-StorageAccounts%2Fazuredeploy.json
 ```
 

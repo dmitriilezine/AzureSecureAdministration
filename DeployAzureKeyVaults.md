@@ -40,7 +40,7 @@ New-AzureRmKeyVault -VaultName $keyVaultName -ResourceGroupName $rgName -Locatio
 ### Deploy "Encryption AKV" into its own RG. This AKV will be used for VM encryption in the primary region.
 #### Key Vault name and Resource Group will be used in later deployments. 
 Run the following PowerShell from the CloudShell to create the key vault in target subscription.
-```PS
+```PowerShell
 # Create Azure Key Vault to be used for Azure Disk Encryption. Update with appropriate names for your design
 $rgName = "ResourceGroupName-myADEAKV"
 $location ="SpecifyRegion - must be the same as where VMs will be deployed at"
@@ -70,7 +70,7 @@ You can use the following PowerShell script to configure it.
 Run it from the CloudShell targeting individually each Key Vault. 
 
 
-```PS
+```PowerShell
 # Configure Key Vault with diagnostics
 # Update parameters to match your design
 

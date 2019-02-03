@@ -11,7 +11,7 @@ Provided template will deploy two domain controllers for specified domain and on
 
 ### Deploy ADDS via ARM template using browser
 Use the following link to initiate deployment in your target Tenant/Subscription.
-```PS
+```PowerShell
 https://portal.azure.com/#create/Microsoft.Template/uri/https%3A%2F%2Fraw.githubusercontent.com%2Fdmitriilezine%2FAzurePAW-ADDS%2Fmaster%2FAzurePAW-ADDS%2Fazuredeploy.json
 ```
 :heavy_exclamation_mark: **Parameters** :heavy_exclamation_mark: Most configuration errors come from specifying wrong parameters. 
@@ -22,7 +22,7 @@ If you are planning to test deployment multiple times and run it against the sam
 to save time it is recommended to save your custom parameters to the parameters file. You can do this on the first browser deployment, 
 first fill in the values for each required parameter then save the parameter file to your computer. Run the following PowerShell to implement ADDS Domain.
 
-```PS
+```PowerShell
 $RGName = "ADDS-ResourceGroupName" # must be present. if not create it prior to running this script
 $URI = "https://raw.githubusercontent.com/dmitriilezine/AzurePAW-ADDS/master/AzurePAW-ADDS/azuredeploy.json"
 $ParFile = "C:\data\ADDS-parametersFile.json"
