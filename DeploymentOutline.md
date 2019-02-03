@@ -49,7 +49,7 @@ Recommend to use Standard pricing tier to get all advanced features of ASC.
 8. Deploy "Identity as Perimeter" access to ADDS. Chose one of the following based on your design decision. 
     
     **High Availability Solution**   
-    8.1 [Deploy AAD Application Proxy](DeployAADApProxy.md)
+    8.1 [Deploy AAD Application Proxy](DeployAADApProxy.md) 
     8.2 [Deploy Azure SQL DB for RDS HA](DeployAzureSQL.md)     
     8.3 [Deploy RDS](DeployRDS.md) 
 
@@ -60,10 +60,10 @@ Recommend to use Standard pricing tier to get all advanced features of ASC.
 12. [Deploy new ADFS Farm](DeployADFS.md)
 13. [Deploy WAP](DeployADFSProxy.md)
 14. [Deploy AAD Connect](DeployAADConnect.md) 
-15. [Deploy additional Domain Controller in the same Azure region where DCs already present](DeployDCsameRegion)
-16. Deploy additional Domain Controllers in the new Azure region
-17. Deploy additional ADFS server in the same Azure region where ADFS is already present
-18. Deploy additional ADFS servers in the new Azure region
+15. [Deploy additional Domain Controller in the same Azure region where DCs already present](DeployDCsameRegion.md)
+16. [Deploy additional Domain Controllers in the new Azure region](DeployDCsnewRegion.md)
+17. [Deploy additional ADFS server in the same Azure region where ADFS is already present](DeployADFSsameRegion.md)
+18. [Deploy additional ADFS servers in the new Azure region](DeployADFSnewRegion.md)
 18. Deploy additional WAP server in the same Azure region where WAP is deployed
 19. Deploy additional WAP servers in the new Azure region
 17. Deploy additional RDS Session Host 
